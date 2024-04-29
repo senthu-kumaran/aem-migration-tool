@@ -1,0 +1,103 @@
+<html>
+<head>
+  <title>AEM - Content Migration Tool</title>
+  <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="main">
+    <h1>AEM - Content Migration Tool</h1>
+    <!-- <input type='file' id='import' accept='.json' aria-hidden="true"> -->
+    <div class="action-container">
+      <div class="container">
+        <div id="source">
+          <div class="source-page-holder">
+              <!-- Scraped HTML to be loaded here -->
+              <main>
+                <section class="clearfix">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque modi molestias hic nobis architecto harum adipisci similique. Ab, officia. Tempore nam odit cum magnam, labore exercitationem accusantium beatae est?</p>
+                </section>
+                <section class="clearfix">
+                  <img src="https://place-hold.it/200X50" alt="Placeholder image">
+                </section>
+                <section class="clearfix">
+                  <div class="intro-copy">
+                    <h1>Page Title</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt non nobis cupiditate dolore saepe ex voluptates quisquam aut! Eligendi corporis exercitationem accusantium quis molestiae. Quibusdam illo reprehenderit ab rem cum.</p>
+                  </div>
+                </section>
+                <section class="clearfix">
+                  <h3>Articles</h3>
+                  <div class="tri-column clearfix">
+                    <article>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum ut recusandae corrupti, perferendis sint ullam nisi sapiente sunt labore inventore quaerat quibusdam veniam, voluptas quasi debitis dolore? Quis, aut veniam.</p>
+                      <img src="https://place-hold.it/200X100" alt="Placeholder image">
+                      <a href="javascript:;">Read more</a>
+                    </article>
+                    <article>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum ut recusandae corrupti, perferendis sint ullam nisi sapiente sunt labore inventore quaerat quibusdam veniam, voluptas quasi debitis dolore? Quis, aut veniam.</p>
+                      <img src="https://place-hold.it/200X100" alt="Placeholder image">
+                      <a href="javascript:;">Read more</a>
+                    </article>
+                    <article>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum ut recusandae corrupti, perferendis sint ullam nisi sapiente sunt labore inventore quaerat quibusdam veniam, voluptas quasi debitis dolore? Quis, aut veniam.</p>
+                      <img src="https://place-hold.it/200X100" alt="Placeholder image">
+                      <a href="javascript:;">Read more</a>
+                    </article>
+                  </div>
+                </section>
+                <section class="clearfix">
+                  <h3>Gallery</h3>
+                  <div class="tri-column clearfix">
+                    <article>
+                      <img src="https://place-hold.it/200X100" alt="Placeholder image">
+                    </article>
+                    <article>
+                      <img src="https://place-hold.it/200X100" alt="Placeholder image">
+                    </article>
+                    <article>
+                      <img src="https://place-hold.it/200X100" alt="Placeholder image">
+                    </article>
+                  </div>
+                </section>
+                <section class="clearfix">
+                  <div class="list-style">
+                    <h3>List</h3>
+                    <ul>
+                      <li>Link 1</li>
+                      <li>Link 2</li>
+                      <li>Link 3</li>
+                    </ul>
+                  </div>
+                </section>
+              </main>
+          </div>
+        </div>
+        <div id="destination">
+          <div class="destination-page-holder">
+            <div class="content-area"></div>
+            <div class="clearfix">
+              <div class="content-area split-half"></div>
+              <div class="content-area split-half"></div>
+            </div>
+            <div class="clearfix">
+              <div class="content-area split-half"></div>
+              <div class="content-area split-half"></div>
+            </div>
+            <div class="content-area"></div>
+            <div class="content-area"></div>
+            <div class="content-area"></div>
+            <div class="content-area"></div>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:;" class="render-data">Render Data</a>
+    </div>
+    <div class="result clearfix html-result"></div>
+    <!-- <div class="result clearfix json-result"></div> -->
+  </div>
+</body>
+</html>
