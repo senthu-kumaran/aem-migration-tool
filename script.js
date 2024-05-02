@@ -8,7 +8,7 @@ $(function() {
 
 		$.ajax({
 			type: "GET",
-			url: requestURL,
+			url: "https://web-scraper-endpoint.vercel.app/scrape?url="+requestURL,
 			// url: "https://web-scraper-endpoint.vercel.app/scrape?url=https://fmcna.com/insights/articles/5-diamond-status-kathleen-belmonte/",
 			// url: "https://web-scraper-endpoint.vercel.app/scrape?url=https://fmcna-stage65a.adobecqms.net/insights/articles/influenza-vaccination-keeps-dialysis-patients-hospital/",
 			contentType: "application/json; charset=utf-8",
