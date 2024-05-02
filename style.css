@@ -32,6 +32,9 @@ div.main {
   margin-top: 25px;
  overflow: hidden;
 }
+.action-container{
+  display: none;
+}
 .container > div{
   float: left;
   width: 50%;
@@ -86,7 +89,7 @@ ul.collection > li {
 h1,h3{
   margin: 0;
 }
-section{
+section *{
   border: 1px solid transparent;
   user-select: none;
 }
@@ -114,7 +117,7 @@ article{
 article *, img{
   width: 100%;
 }
-.source-page-holder section:hover{
+.source-page-holder > *{
   border: 1px solid blue;
   cursor: all-scroll;
 }
@@ -147,4 +150,63 @@ article *, img{
   z-index: 999;
   opacity: 0.2;
   border: 1px solid #fff;
+}
+
+#loader-container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.75);
+  display: none;
+} 
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+  margin: 20% auto 0 auto;
+}
+.loader::before,
+.loader::after {
+   content: "";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background: inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {transform: rotate(1turn)}
+}
+.page-loader input{
+  width: 360px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  margin: 30px 10px 0 0;
+}
+.page-loader button{
+  background: #0082ef;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px 0;
+  outline: none;
+  border: 0;
+  cursor: pointer;
 }
