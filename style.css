@@ -122,20 +122,25 @@ article *, img{
   cursor: all-scroll;
 }
 .content-area{
-  border: 2px dotted #aaa;
   overflow: hidden;
   margin-bottom: 20px;
   position: relative;
   min-height: 100px;
 }
-/* .content-area:after{
-  content: ' ';
-  display: block;
-  width: 10px;
-  height: 100px;
-  display: block;
-} */
-.content-area.highlight{
+.drop-container{
+  min-height: 100px;
+  border: 2px dotted #aaa;
+}
+.pre-title, .page-title{
+  min-height: 50px;
+  overflow: hidden;
+  position: relative;
+  border: 2px dotted #aaa;
+}
+.hero-section{
+  border: 0;
+}
+.drop-container.highlight{
   border-color: #f00;
 }
 
@@ -209,4 +214,26 @@ article *, img{
   outline: none;
   border: 0;
   cursor: pointer;
+}
+label[for="edit_social"]{
+  font-size: 12px;
+}
+.pre-title:after, .page-title:after, .banner-image:after, .page-content:after{
+  position: absolute;
+  left: 3px;
+  font-size: 10px;
+  color: #aaa;
+  top: 3px;
+}
+.pre-title:after{
+  content: "Pre title";
+}
+.page-title:after{
+  content: "Page title";
+}
+.banner-image:after{
+  content: "Banner image";
+}
+.page-content:after{
+  content: "Page content";
 }
