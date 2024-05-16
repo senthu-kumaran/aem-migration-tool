@@ -12,10 +12,22 @@
   <div class="main">
     <h1>AEM - Content Migration Tool</h1>
     <div class="page-loader">
-      <input type="text" value="https://fmcna.com/insights/articles/5-diamond-status-kathleen-belmonte/"/>
-      <button>Load page</button>
+      <div class="toggle">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label class="load-text">Toggle to load from JSON</label>
+      </div>
+      <div class="load-data load-url">
+        <input type="text" value="https://fmcna.com/insights/articles/5-diamond-status-kathleen-belmonte/"/>
+        <button>Load page</button>
+      </div>
+      <div class="load-data load-json">
+        <input type='file' id='import' accept='.json' aria-hidden="true">
+      </div>
     </div>
-    <!-- <input type='file' id='import' accept='.json' aria-hidden="true"> -->
+    
 
 
     <div class="action-container">
@@ -30,8 +42,7 @@
         </div>
         <div id="destination">
           <div class="destination-page-holder">
-            <input type="checkbox" class="edit_social">
-            <label for="edit_social">Edit Social Share URLs</label>
+            <h3 for="edit_social">Drag and drop the content from left panel match the new template</h3>
             <div class="clearfix">
               <div class="content-area split-half hero-section">
                 <div class="drop-container pre-title"></div>

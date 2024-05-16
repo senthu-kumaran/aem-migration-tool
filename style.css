@@ -1,7 +1,7 @@
 
 body {
-  background-color: #ccc;
-  font-family: Verdana, Georgia;
+  /* background-color: #ccc; */
+  font-family: Arial, Georgia;
   margin: 0;
   padding: 25px;
 }
@@ -34,6 +34,9 @@ div.main {
 }
 .action-container{
   display: none;
+}
+.action-container p{
+  font-size: 12px;
 }
 .container > div{
   float: left;
@@ -137,17 +140,22 @@ article *, img{
   position: relative;
   border: 2px dotted #aaa;
 }
-.hero-section{
-  border: 0;
+.page-content{
+  min-height: 300px;
 }
 .drop-container.highlight{
   border-color: #f00;
 }
 
 .content-area.split-half{
-  width: 48%;
+  width: 49.5%;
   float: left;
-  margin: 1%;
+  margin: 1% 0 1% 1%;
+}
+
+.content-area.split-half.hero-section{
+  border: 0;
+  margin-left: 0;
 }
 
 .ui-draggable-dragging{
@@ -200,9 +208,10 @@ article *, img{
   width: 360px;
   padding: 10px 10px;
   border-radius: 5px;
+  background-color: #ccc;
   border: 0;
   outline: none;
-  margin: 30px 10px 0 0;
+  margin: 0 10px 0 0;
 }
 .page-loader button{
   background: #0082ef;
@@ -215,8 +224,9 @@ article *, img{
   border: 0;
   cursor: pointer;
 }
-label[for="edit_social"]{
+label{
   font-size: 12px;
+  margin-right: 10px;
 }
 .pre-title:after, .page-title:after, .banner-image:after, .page-content:after{
   position: absolute;
@@ -236,4 +246,140 @@ label[for="edit_social"]{
 }
 .page-content:after{
   content: "Page content";
+}
+
+.ui-draggable{
+  position: relative;
+}
+
+.drop-container *{
+  margin: 10px 0 0 0;
+}
+.drop-container span.close{
+  position: relative;
+  top: 10px;
+  z-index: 999;
+  color: #666;
+  font-size: 10px;
+  background: #fff;
+  padding: 3px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px;
+  z-index: 999;
+  display: inline-block;
+}
+
+.destination-page-holder input.social-share-input{
+  margin: 4px 0 15px 0;
+  padding: 5px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.toggle p{
+  display: inline;
+  position: relative;
+  top: 0;
+  font-size: 12px;
+}
+.toggle label{
+  margin-right: 0;
+}
+.load-json{
+  display: none;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.load-text{
+  position: relative;
+  top: 18px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 5px;
+}
+
+.slider.round:before {
+  border-radius: 5px;
+}
+
+#import{
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 0;
+}
+/* file upload button */
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 36px;
+  cursor: pointer;
+  background-color: #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+  background-color: #ddd;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
 }
