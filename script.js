@@ -16,19 +16,20 @@ $(function() {
 
 	var requestURL
 	$('.page-loader input').focus()
+	
+	if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+		console.log('asdf')
+		requestDomain = "http://localhost:3000"
+	}else{
+		requestDomain = "https://web-scraper-endpoint.vercel.app"
+		$('.load-url input').val('')
+	}
+
 	$('.page-loader button').click(function(e){
 		e.preventDefault()
 		requestURL = $('.load-url input').val();
 
 		$("#loader-container").show()
-
-		if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
-			console.log('asdf')
-			requestDomain = "http://localhost:3000"
-		}else{
-			requestDomain = "https://web-scraper-endpoint.vercel.app"
-			$('.load-url input').val('')
-		}
 
 		// https://fmcna.com/insights/articles/5-diamond-status-kathleen-belmonte/"
 		// https://fmcna-stage65a.adobecqms.net/insights/articles/influenza-vaccination-keeps-dialysis-patients-hospital/",
@@ -57,6 +58,7 @@ $(function() {
 			$('.load-text').text('Toggle to load from JSON')
 			$('.load-data').hide()
 			$('.load-url').fadeIn()
+			$('.page-loader input').focus()
 		}
 	});
 	
