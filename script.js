@@ -27,6 +27,7 @@ $(function() {
 			requestDomain = "http://localhost:3000"
 		}else{
 			requestDomain = "https://web-scraper-endpoint.vercel.app"
+			$('.load-url input').val('')
 		}
 
 		// https://fmcna.com/insights/articles/5-diamond-status-kathleen-belmonte/"
