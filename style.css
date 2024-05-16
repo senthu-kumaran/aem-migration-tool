@@ -24,7 +24,7 @@ div.main {
   margin: 0 auto 80px auto;
 }
 .container{
-  background: #ddd;
+  background: #ccc;
   float: left;
 }
 
@@ -35,17 +35,16 @@ div.main {
 .action-container{
   display: none;
 }
-.action-container p{
+.action-container p, .action-container h1, .action-container h2, .action-container h3, .action-container h4, .action-container h5, .action-container h6, .action-container label, .action-container span{
   font-size: 12px;
 }
 .container > div{
   float: left;
   width: 50%;
 } 
-
   
 #source {
-  background: #bbb;
+  background: #ccc;
 }
 #source, #destination{
   padding: 20px 10px;
