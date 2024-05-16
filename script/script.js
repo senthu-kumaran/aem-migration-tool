@@ -29,22 +29,24 @@ $(function() {
 		e.preventDefault()
 		requestURL = $('.load-url input').val();
 
-		$("#loader-container").show()
+		if(requestURL.trim().length){
+			$("#loader-container").show()
 
-		// https://fmcna.com/insights/articles/5-diamond-status-kathleen-belmonte/"
-		// https://fmcna-stage65a.adobecqms.net/insights/articles/influenza-vaccination-keeps-dialysis-patients-hospital/",
-
-		$.ajax({
-			type: "GET",
-			url: requestDomain+"/scrape?url="+requestURL,
-			contentType: "application/json; charset=utf-8",
-			success: function (data) {
-				loadPage(data)
-			},
-			error: function (textStatus, errorThrown) {
-				console.log(textStatus)
-			}
-		});
+			// https://fmcna.com/insights/articles/5-diamond-status-kathleen-belmonte/"
+			// https://fmcna-stage65a.adobecqms.net/insights/articles/influenza-vaccination-keeps-dialysis-patients-hospital/",
+	
+			$.ajax({
+				type: "GET",
+				url: requestDomain+"/scrape?url="+requestURL,
+				contentType: "application/json; charset=utf-8",
+				success: function (data) {
+					loadPage(data)
+				},
+				error: function (textStatus, errorThrown) {
+					console.log(textStatus)
+				}
+			});
+		}		
 	})
 	
 	$('.switch input[type=checkbox]').change(function(){
